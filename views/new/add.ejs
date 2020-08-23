@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background: paleturquoise;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Add a flight</h1>
+    <form action='newFlight' method='POST' autocomplete='off'>
+        <label for='Airline'>Choose your airline: </label>
+        <select name='airline' id='Airline'>
+            <option value='American'>American</option>
+            <option value='Southwest'>Southwest</option>
+            <option value='United'>United</option>
+        </select></br>
+        <label for='Airport'>Choose your airport: </label>
+        <select name='airport' id='Airport'>
+            <option value='AUS'>AUS</option>
+            <option value='DFW'>DFW</option>
+            <option value='DEN'>DEN</option>
+            <option value='LAX'>LAX</option>
+            <option value='SAN'>SAN</option>
+        </select></br>
+        <label for='flightNo'>Enter the flight number(10-9999): </label>
+        <input type='text' name='flightNo' placeholder='Flight number...' required></br>
+        <label for='departure'>Departure: </label>
+        <input name='departs' type='date'></br>
+        <input type='submit'>
+    </form></br>
+    <a href='/'>Main Menu</a>
+    <p></p>
+</body>
+
+</html>

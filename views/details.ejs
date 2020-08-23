@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Details</title>
+</head>
+
+<body>
+  <%= flightList.airport %>
+  <%= flightList.airline %>
+  <%= flightList.flightNo %>
+  <%= flightList.departs %>
+  <%= flightList.arrivals %>
+  <%= flightList.seat %>
+  <%= flightList.destination %>
+  <%= flightList.price %>
+  <form action='/details/<%= flightList.id %>' method='POST'>
+    <label for='Destination'>Destination airport: </label>
+    <select name='destination' id='Airport'>
+      <option value='AUS'>AUS</option>
+      <option value='DFW'>DFW</option>
+      <option value='DEN'>DEN</option>
+      <option value='LAX'>LAX</option>
+      <option value='SAN'>SAN</option>
+    </select></br>
+    <label for='Arrival'>Arrival: </label>
+    <input name='arrival' type='date'>
+  </form></br>
+  <a href='/'>Main Menu</a>
+</body>
+
+</html>

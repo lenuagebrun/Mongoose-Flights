@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Details</title>
+</head>
+
+<body>
+  <ul>
+    <% flightList.forEach(function(t) { %>
+    <li>
+      <%= t.airport %>
+      <%= t.airline %>
+      <%= t.flightNo %>
+      <%= t.departs %>
+      <%= t.destination %>
+      <%= t.arrivals %>
+      <%= t.seat %>
+      <%= t.price %>
+    </li>
+    <form action='/allFlights/<%= t.id %>?_method=DELETE' method='POST'>
+      <button type='submit'>Delete Flight</button>
+    </form>
+    <% }); %>
+  </ul>
+  <form>
+    <label for='Destination'>Destination: </label>
+    <select name='destination' id='Airport'>
+      <option value='AUS'>AUS</option>
+      <option value='DFW'>DFW</option>
+      <option value='DEN'>DEN</option>
+      <option value='LAX'>LAX</option>
+      <option value='SAN'>SAN</option>
+    </select></br>
+    <label for='Arrival'>Arrival: </label>
+    <input name='arrival' type='date'></br>
+    <input type='submit'>
+  </form>
+  <a href='/'>Main Menu</a>
+</body>
+
+</html>

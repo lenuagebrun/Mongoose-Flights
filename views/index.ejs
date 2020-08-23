@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PA's Airline</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>PA's Airline</h1>
+    <p>Welcome to PA's Airline</p>
+    <a href='/allFlights'>All Flights/Delete Flights</a></br>
+    <a href='/newFlight'>Add Flight</a>
+    <ul>
+      <% flightList.forEach(function(t) { %>
+      <li>
+        <%= t.airport %>
+        <%= t.airline %>
+        <%= t.flightNo %>
+        <%= t.departs %>
+        <%= t.destination %>
+        <%= t.arrivals %>
+        <%= t.seat %>
+        <%= t.price %>
+      </li>
+      <form action='/details/<%= t.id %>'>
+        <button type='submit'>Details</button>
+      </form>
+    <% }); %>
+    </ul>
+  </body>
+</html>
